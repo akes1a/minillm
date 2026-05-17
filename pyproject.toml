@@ -1,0 +1,28 @@
+[project]
+name = "minillm"
+version = "0.1.0"
+description = "A small from-scratch decoder-only LLM project."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "numpy",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+]
+v1 = [
+  "tokenizers",
+  "datasets",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

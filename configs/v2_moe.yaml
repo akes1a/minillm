@@ -1,0 +1,13 @@
+# v2: MoE 架构配置。
+model:
+  use_moe: true
+  moe:
+    num_experts: 4
+    top_k: 1
+    expert_hidden_size: 3072
+    aux_loss_weight: 0.01
+    router_z_loss_weight: 0.0
+
+train:
+  log_routing_stats: true
+
