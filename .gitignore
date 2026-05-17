@@ -17,7 +17,9 @@ adapters/
 runs/
 logs/
 
+# Local planning documents
+PRD.md
+
 # Local environment
 .env
 .env.*
-
