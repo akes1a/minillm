@@ -30,3 +30,13 @@ minillm/
 - MoE 和 LoRA 作为可选能力接入，不破坏 dense baseline。
 - 核心模型逻辑优先可读，不为了过早优化牺牲清晰度。
 
+## 阶段测试
+
+v0 的 tiny overfit 测试用于确认最小 Transformer 主干能完成训练闭环：
+
+```bash
+conda run -n minillm python scripts/stage_tests/tiny_overfit.py
+```
+
+如果这个脚本无法让固定小 batch 的 loss 明显下降，说明 forward、loss、
+backward 或 optimizer 路径里可能有问题。

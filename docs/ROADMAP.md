@@ -5,6 +5,7 @@
 - 实现基础 Transformer block。
 - 实现 FFN、attention、normalization。
 - 支持 toy loss 和 toy generation。
+- 提供 `scripts/stage_tests/tiny_overfit.py`，验证固定小 batch 可以被过拟合。
 
 ## v1：训练与推理主干
 
@@ -26,4 +27,3 @@
 - 为 attention projection 接入 LoRA。
 - 支持冻结 base model。
 - 支持 adapter 保存、加载与切换。
-
